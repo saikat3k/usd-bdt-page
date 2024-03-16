@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USD to BDT</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .hero{
+            padding-top: 30px;
+        }
+        .hero-area{
+            width: 400px;
+            height: 250px;
+            background-color: tomato;
+            color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.28);
+-webkit-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.28);
+-moz-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.28);
+        }
+        input{
+            width: 300px;
+            padding: 10px ;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem
+        }
+        input:focus{
+            outline: none;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            border-radius: 7px;
+            background-color: #FFF;
+            color: tomato;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3rem;
+            padding-top: 20px;
+        }
+        h2{
+            line-height: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.4rem;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-area">
+            <h2>USD to BDT converter</h2>
+            <input type="number" name="" id="" placeholder="Enter USD value"><br>
+            <button>Convert to BTD</button>
+            <h1>The BDT value is : <span></span></h1>
+        </div>
+    </div>
+
+    <script>
+        const usd = document.querySelector('input');
+        const btn = document.querySelector('button');
+        const text =document.querySelector('span');
+       
+        btn.addEventListener('click',()=>{
+            const bdt = Number(usd.value)*120;
+            text.innerHTML = bdt +' TAKA';
+        })
+    </script>
+</body>
+</html>
